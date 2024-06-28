@@ -1,0 +1,103 @@
+
+
+header {
+    text-transform: uppercase;
+    height: 100px;
+    padding-top: 10px;
+    background-color: rgb(220, 207, 192);
+    
+}
+
+
+
+
+header ul
+{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 50px;
+    width: 80%;
+}
+
+
+main{
+    padding: 10px
+}
+
+ul
+{
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 30px;
+    
+}
+
+
+
+.editbuttom
+{
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    background-image: url("../assets/edit.png");
+    background-repeat: no-repeat;
+
+}
+
+.delbuttom
+{
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    background-image: url("../assets/trash.png");
+    background-repeat: no-repeat;
+
+
+}
+
+.contact
+{
+    display:flex;
+    padding: 3px;
+    
+}
+
+.formwrap
+{
+    width: 250px;
+    display: none;
+}
+.contactform
+{
+    gap: 10px;
+    
+}
+.hideform
+{
+    display: block;
+}
+
+footer {
+    display: flex;
+    justify-content: center; 
+    padding: 35px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(220, 207, 192);
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    width: 95%; 
+    margin: 0; 
+    padding: 0; 
+}
+
+
+
+
+
