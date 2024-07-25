@@ -48,6 +48,8 @@ ul
     height: 30px;
     background-image: url("../assets/edit.png");
     background-repeat: no-repeat;
+    cursor: pointer;
+    
 
 }
 
@@ -58,8 +60,33 @@ ul
     height: 30px;
     background-image: url("../assets/trash.png");
     background-repeat: no-repeat;
+    cursor: pointer;
 
 
+}
+
+.showinfo
+{
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    background-image: url("../assets/eye.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.showinfo:hover {
+    background-color: rgb(76, 174, 76, 0.5);
+}
+
+.delbuttom:hover
+{
+    background-color: rgb(255, 0, 0,0.5);
+}
+
+.editbuttom:hover
+{
+    background-color: rgb(0, 123, 255, 0.5);
 }
 
 .contact
@@ -169,6 +196,16 @@ h2 {
     cursor: pointer;
 }
 
-
+.info {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Limit the width */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    position: relative;
+}
 
 

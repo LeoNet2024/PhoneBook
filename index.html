@@ -29,12 +29,13 @@
 
     <main>
         <div class="container">
+            <input type="text" id="searchbtn" placeholder="Search Contacts..." onkeyup="searchContacts()">
             <button class="btn" id="openModelBtn" onclick="openModel()">Add Contact</button>
-            <button class="btn" style="background-color: red;" id="deleteBtn" onclick="deleteContacts()">Delete Contacts</button>
+            <button class="btn" style="background-color: red;" id="deleteBtn" onclick="deleteValues()">Delete Contacts</button>
         </div>
       
         
-        <ul id="list">
+        <ul id="list"> 
  
         </ul>
 
@@ -61,11 +62,20 @@
             <label for="userAddress">Address:</label>
             <input type="text" id="userAddress">
             <br><br>
-            <input class ="btn" style="background-color: green;" type="button" value="Submit" onclick="saveContact()">
-
+            <input  id="submitBtn" class ="btn" style="background-color: green;" type="button" value="Submit" onclick="saveContact()">
+            <input  id="updateBtn" class ="btn" style="background-color: green; display: none;" type="button" value="Update" onclick="updateContact()">
+        
         </form>
         </div>
     </div>
+
+
+    <div class="model" id="info" >
+        <div class="info">
+            <button class="close-btn" id="closeInfoBtn" onclick="closeInfo(event)">X</button>
+        </div> 
+    </div>
+
 
     <script src="index.js"></script> 
 </body>
@@ -82,3 +92,4 @@
     </ul>
 </footer>
 </html>
+
