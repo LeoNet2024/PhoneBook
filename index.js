@@ -1,5 +1,13 @@
 "use strict";
 
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    document.header.classList.toggle('dark-mode');
+    document.footer.classList.toggle('dark-mode');
+
+ 
+}
+
 // Sample initial data
 let users = [
     {
@@ -178,6 +186,8 @@ function editContact(index) {
         };
     }
 }
+
+
 
 // Update a contact by index
 function updateContact(index) {
