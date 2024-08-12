@@ -3,88 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Phonebook</title>
+
+    <!-- Links -->
+
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-   
-    
+
 </head>
+
+<!-- Header -->
+
+<header>
+
+    <div class="headerwrap hftext">
+        <ul>
+            
+            <li>
+                <a href="./index.html" id="phonebook-link">
+                    <img src="assets/phonebook.png" id="PhoneBook-Icon" class="header-icon" alt="PhoneBook Icon"></a>
+                      PhoneBook
+               
+            </li>
+            
+        </ul>
+    </div>
+
+</header>
+
+<!-- Body -->
 <body>
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchbtn" placeholder="Search Contacts..." onkeyup="searchContacts()">
+            </div>
 
-    <header>
+            <!-- Add Contact -->
+            <button class="btn" id="openModelBtn" onclick="openModel(true)">
+                <img src="assets/add-user.png" alt="Add Contact Icon" class="button-icon"> Add Contact
+            </button>
 
-        <div class="headerwrap">
-            <ul>
-                
-                <li>book phone</li>
-                <li>about us</li>
-                
-            </ul>
+            <!-- Clear Contacts -->
+            <button class="btn" style="background-color: red;" id="deleteBtn" onclick="deleteValues()">
+                 <img src="assets/contact.png" alt="Add Contact Icon" class="button-icon">Clear Contacts
+                </button>
+
+            <!-- Dark Mode -->
+            <button class="btn" id="darkModeToggle" onclick="toggleDarkMode()">
+                <img src="assets/sleep-mode.png" alt="Dark Mode Icon" class="button-icon"> Dark Mode
+            </button>
+    
+        <!-- Contacts List -->
+        <div class="contact-table">
+             <div class="contact-header">
+             <div class="contact-name-header">Name</div>
+            <div class="contact-number-header">Phone Number</div>
+        <div class="contact-actions-header">Actions</div>
+    </div>
+    <ul id="contactList" class="contact-list">
+        <!-- Contacts will be rendered here -->
+    </ul>
+    </div>
+
+        <!-- No Contacts Message -->
+        <div id="noContactsMessage" class="no-contacts-message" style="display: none;">
+            No Contacts Available
         </div>
 
-    </header>
-
-
-
-    <main>
-        
-        <div class="container">
-            <input type="text" id="searchbtn" placeholder="Search Contacts..." onkeyup="searchContacts()">
-            <button class="btn" id="openModelBtn" onclick="openModel()">Add Contact</button>
-            <button class="btn" style="background-color: red;" id="deleteBtn" onclick="deleteValues()">Delete Contacts</button>
-            <button class="btn" id="darkModeToggle" onclick="toggleDarkMode()">Dark Mode</button>
-
-        
-      
-        
-        <ul id="list"> 
- 
-        </ul>
-
-    </div>
 
     </main>
 
   
 
+    <!-- Add/Update Contact Model -->
     <div class="model" id="myModel" onclick="closeModel(event)">
-        <div class="content" > 
-        <button class="close-btn" id="closeModelBtn" onclick="closeModel(event)">X</button>
-        <h2>Add a contact</h2>
-        <form action="" method="get">
-            <label for="userName">Name:</label>
-            <input type="text" id="userName">
-            <br><br>
-            <label for="userEmail">Email:</label>
-            <input type="email" id="userEmail">
-            <br><br>
-            <label for="userNumber">Number:</label>
-            <input type="text" id="userNumber">
-            <br><br>
-            <label for="userAddress">Address:</label>
-            <input type="text" id="userAddress">
-            <br><br>
-            <input  id="submitBtn" class ="btn" style="background-color: green;" type="button" value="Submit" onclick="saveContact()">
-            <input  id="updateBtn" class ="btn" style="background-color: green; display: none;" type="button" value="Update" onclick="updateContact()">
-        
-        </form>
+        <div class="content"> 
+            <button class="close-btn" id="closeModelBtn" onclick="closeModel(event)">X</button>
+            <h2>ADD A CONTACT</h2>
+            <form action="" method="get">
+                <label for="userName">Name:</label>
+                <input type="text" id="userName">
+                <br><br>
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail">
+                <br><br>
+                <label for="userNumber">Number:</label>
+                <input type="text" id="userNumber">
+                <br><br>
+                <label for="userAddress">Address:</label>
+                <input type="text" id="userAddress">
+                <br><br>
+                <label for="userDescription">Description: </label>
+                <input type="text" id="userDescription">
+                <br><br>
+                <input id="submitBtn" class="btn" style="background-color: green;" type="button" value="Submit" onclick="saveContact()">
+                <input id="updateBtn" class="btn" style="background-color: green; display: none;" type="button" value="Update" onclick="updateContact()">
+            </form>
         </div>
     </div>
 
 
+    <!-- Close pop-up window button -->
     <div class="model" id="info" >
         <div class="info">
             <button class="close-btn" id="closeInfoBtn" onclick="closeInfo(event)">X</button>
         </div> 
     </div>
 
-
+<!-- Calling the JS file -->
     <script src="index.js"></script> 
 </body>
 
+<!-- Footer -->
 <footer>
-    <ul>
+    <ul class="hftext">
         <li>leon gitelman <br>
             Neo zino
         </li>
