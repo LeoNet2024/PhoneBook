@@ -15,5 +15,7 @@ Highlight on Hover: Contact rows are highlighted when hovered, providing a clear
 Technologies Used
 
 HTML: For structuring the web pages.
+
 CSS: For styling the website, including hover effects and responsive design.
+
 JavaScript: For dynamic functionalities like adding, editing, deleting, and searching contacts, as well as handling dark mode.
